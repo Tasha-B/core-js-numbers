@@ -1,4 +1,3 @@
-/* eslint-disable */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -200,7 +199,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  for (let i = 2; i <= Math.sqrt(n); i++) {
+  for (let i = 2; i <= Math.sqrt(n); i += 1) {
     if (n % i === 0) {
       return false;
     }
@@ -259,7 +258,7 @@ function getFibonacciNumber(index) {
   let a = 1;
   let b = 1;
   if (index === 0) return 0;
-  for (let i = 2; i < index; i++) {
+  for (let i = 2; i < index; i += 1) {
     [a, b] = [b, a + b];
   }
   return index === 1 ? a : b;
@@ -278,7 +277,7 @@ function getFibonacciNumber(index) {
  */
 function getSumToN(n) {
   let sum = 0;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i += 1) {
     sum += i;
   }
   return sum;
@@ -316,7 +315,12 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num && (num & (num - 1)) === 0;
+  let n = 2;
+  while (n < num) {
+    n *= 2;
+  }
+  if (n === num) return true;
+  return false;
 }
 
 /**
@@ -591,7 +595,7 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 /**
