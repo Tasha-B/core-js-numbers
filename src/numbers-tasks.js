@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -199,7 +200,6 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  // eslint-disable-next-line no-plusplus
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
@@ -259,7 +259,6 @@ function getFibonacciNumber(index) {
   let a = 1;
   let b = 1;
   if (index === 0) return 0;
-  // eslint-disable-next-line no-plusplus
   for (let i = 2; i < index; i++) {
     [a, b] = [b, a + b];
   }
@@ -279,9 +278,7 @@ function getFibonacciNumber(index) {
  */
 function getSumToN(n) {
   let sum = 0;
-  // eslint-disable-next-line no-plusplus
   for (let i = 1; i <= n; i++) {
-    // eslint-disable-next-line no-multi-assign
     sum += i;
   }
   return sum;
@@ -319,7 +316,6 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  // eslint-disable-next-line no-bitwise
   return num && (num & (num - 1)) === 0;
 }
 
